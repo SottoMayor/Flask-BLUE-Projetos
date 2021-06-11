@@ -6,13 +6,26 @@ app = Flask(__name__)
 @app.route('/')
 def home():
 
+    enimies_list = [
+        {"imgPath": "../static/images/csgo-phoenix-tr.png",
+         "alt": "Terrorist Phoenix", "description": "Terrorista Phoenix"},
+        {"imgPath": "../static/images/csgo-elite-crew-tr.png",
+         "alt": "Terrorist Elit Crew", "description": "Terrorista Elit Crew"},
+        {"imgPath": "../static/images/csgo-separatist-tr.png",
+         "alt": "Terrorist Separatist", "description": "Terrorista Separatist"}
+    ]
+
+    guns_list = [
+        {"imgPath": "../static/images/csgo-deagle.png",
+            "alt": "Desert Eagle", "description": "Desert Eagle"},
+        {"imgPath": "../static/images/csgo-ak47.jpg",
+            "alt": "AK47", "description": "Ak47"},
+        {"imgPath": "../static/images/csgo-awp.png",
+            "alt": "AWP", "description": "AWP"},
+    ]
+
     return render_template(
-        'index.html',
-        name='Messão',
-        hp=1200,
-        gif_url='https://media4.giphy.com/media/loG32MXYyQl5vUJL46/200w.' +
-        'gif?cid=82a1493betw1h7mnltat4ikehke0m61v0l8fp1dfy64ssg5c&rid=' +
-        '200w.gif&ct=g')
+        'index.html', enimies_list, guns_list)
 
 
 if __name__ == '__main__':
