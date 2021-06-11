@@ -1,3 +1,42 @@
-body{
-    background-color: brown;
+.body-project{
+    height: auto;
+}
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body-project > .container{
+    margin: 30px auto;
+}
+
+.body-project .card-container{
+    border-right: 10px solid #536b78;
+    border-top: 10px solid #536b78;
+    border-left: 10px solid #cee5f2;
+    border-bottom: 10px solid #cee5f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-project .card figure{
+    height: 425px;
+    
+}
+
+.body-project .card img{
+    height: 100%;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .main-header{
+        flex-direction: column;
+        justify-content: center;
+    }
 }
