@@ -3,7 +3,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def home():
 
     enimies_list = [
@@ -25,7 +25,7 @@ def home():
     ]
 
     return render_template(
-        'index.html', enimies_list, guns_list)
+        'index.html', enimies=enimies_list, guns=guns_list)
 
 
 if __name__ == '__main__':
