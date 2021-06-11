@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" href="static/main.css">
+    <link rel="stylesheet" href="static/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+</head>
+<body class="background">
+
+    <header class="main-header container primary">
+
+        <h2 class="big-header">Calculadora de Danos</h2>
+
+        <h2 class="medium-header">Projeto 1 - Flask</h2>
+
+    </header><!--main-header-->
+
+    
+    <main class="container-1240 body-project primary">
+        <h2 class="medium-header">
+            Qual <u>inimigo</u> você quer atacar?
+        </h2>
+        <section class="enimies">
+
+            <article class="enimies_card">
+                <img src="../static/images/csgo-phoenix-tr.png" alt="Terrorist Phoenix">
+                <h2 class="small-header">Terrorista Phoenix</h2>
+            </article><!--enimies-card-->
+
+            <article class="enimies_card">
+                <img src="../static/images/csgo-elite-crew-tr.png" alt="Terrorist Elit Crew">
+                <h2 class="small-header">Terrorista Phoenix</h2>
+            </article><!--enimies-card-->
+
+            <article class="enimies_card">
+                <img src="../static/images/csgo-separatist-tr.png" alt="Terrorist Separatist">
+                <h2 class="small-header">Terrorista Phoenix</h2>
+            </article><!--enimies-card-->
+        </section><!--enimies-->
+
+        <h2 class="medium-header">
+            Com qual <u>arma</u> você quer atacar?
+        </h2>
+
+        <section class="guns">
+
+            <article class="guns_card">
+                <figure>
+                    <img src="../static/images/csgo-deagle.png" alt="Desert Eagle">
+                </figure>
+                <h2 class="small-header">Desert Eagle</h2>
+            </article><!--guns-card-->
+
+            <article class="guns_card">
+                <figure>
+                    <img src="../static/images/csgo-ak47.jpg" alt="AK47">
+                </figure>
+                <h2 class="small-header">Ak47</h2>
+            </article><!--guns-card-->
+
+            <article class="guns_card">
+                <figure>
+                    <img src="../static/images/csgo-awp.png" alt="AWP">
+                </figure>
+                <h2 class="small-header">AWP</h2>
+            </article><!--guns-card-->
+
+        </section><!--guns-->
+
+        <section class="atacar">
+            <form method="POST" action="/">
+                <button type="submit">Atacar!</button>
+            </form>
+        </section><!--atacar-->
+
+    </main><!--body-project-->
+
+
+    <footer>
+        <!--considerações finais-->
+    </footer>
+
+</body>
+</html>

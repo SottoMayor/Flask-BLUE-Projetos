@@ -1,0 +1,31 @@
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body-project{
+    margin-top: 30px;
+    box-shadow: 8px 0px 17px -6px rgba(0,0,0,0.75);
+    border: 5px solid #accbe1;
+}
+
+.body .enimies{
+    display: flex;
+    justify-content: space-around;
+}
+
+.body-project .enimies_card, .body-project .guns_card{
+    width: 500px;
+}
+
+.body-project .enimies_card img{
+    height: 100%;
+}
+
+@media screen and (max-width: 768px){
+    .main-header{
+        flex-direction: column;
+        
+    }
+}
