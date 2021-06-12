@@ -22,6 +22,8 @@
 
             <article class="container primary card-container">
 
+                {% if not change %}
+
                 <div class="card">
                     <figure>
                         <img src="../static/images/trio_msn.jpeg" alt="TrioMSN">
@@ -36,6 +38,25 @@
                     </div>
                     
                 </div>
+
+                {% else %}
+
+                <div class="card">
+                    <figure>
+                        <img src="../static/images/messi_suarez.jpg" alt="TrioMSN">
+                    </figure>
+
+                    <div class="text-centered">
+                        <h2 class="big-header">O trio MSN acabou!</h2>
+
+                        <h3 class="small-header">Aqui o barça entrou em crise!</h3>
+
+                        <p class="my-paragraph">Messi, Neymar e Suarez tristes!!!</p>
+                    </div>
+                    
+                </div>
+
+                {% endif %}
 
             </article>
 
