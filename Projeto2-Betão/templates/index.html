@@ -20,47 +20,33 @@
                 <h2 class="medium-header">Projeto 2 - Flask</h2>
             </header>
 
-            <article class="container primary card-container">
-
-                {% if not change %}
+            <article id="cart-container" class="container primary card-container">
 
                 <div class="card">
                     <figure>
-                        <img src="../static/images/trio_msn.jpeg" alt="TrioMSN">
+                        <img src="" alt="TrioMSN" id="my-img">
                     </figure>
 
                     <div class="text-centered">
-                        <h2 class="big-header">Esse é o trio MSN</h2>
+                        <h2 class="big-header" id="big-header"></h2>
 
-                        <h3 class="small-header">Aqui o barça ganhava muitos títulos!</h3>
+                        <h3 class="small-header" id="small-header"></h3>
 
-                        <p class="my-paragraph">Messi, Neymar e Suarez felizes!!!</p>
+                        <p class="my-paragraph" id="my-paragraph"></p>
                     </div>
                     
                 </div>
-
-                {% else %}
-
-                <div class="card">
-                    <figure>
-                        <img src="../static/images/messi_suarez.jpg" alt="TrioMSN">
-                    </figure>
-
-                    <div class="text-centered">
-                        <h2 class="big-header">O trio MSN acabou!</h2>
-
-                        <h3 class="small-header">Aqui o barça entrou em crise!</h3>
-
-                        <p class="my-paragraph">Messi, Neymar e Suarez tristes!!!</p>
-                    </div>
-                    
-                </div>
-
-                {% endif %}
 
             </article>
 
+            <div class="text-centered">
+                <button id="change" class="btn-success">Trocar</button>
+            </div>
+            
+
         </section>
+
+        <script src="../static/js/index.js"></script>
 
     </main>
 </body>
