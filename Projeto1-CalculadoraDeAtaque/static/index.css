@@ -4,6 +4,49 @@
     align-items: center;
 }
 
+.linha-container {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.elementos-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.elemento {
+    cursor: pointer;
+}
+
+.elemento p {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.selecionado {
+    border-bottom: 10px solid #6a8c9e;
+    border-right: 7px solid #6a8c9e;
+    padding: 10px;
+    transform: scale(1.02);
+    transition: 0.4s;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+#dano {
+    font-size: medium;
+    font-weight: bold;
+}
+
+
 .body-project{
     margin-top: 30px;
     box-shadow: 8px 0px 17px -6px rgba(0,0,0,0.75);
@@ -36,6 +79,7 @@
 .btn-success{
     padding: 20px 40px;
     border: 0;
+    border-radius: 20px;
     cursor: pointer;
     background-color: rgb(20, 143, 20);
     border-bottom: 8px solid rgb(1, 104, 1);

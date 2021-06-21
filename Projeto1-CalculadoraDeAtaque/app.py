@@ -6,26 +6,8 @@ app = Flask(__name__)
 @app.route('/', methods=["GET", "POST"])
 def home():
 
-    enimies_list = [
-        {"imgPath": "../static/images/csgo-phoenix-tr.png",
-         "alt": "Terrorist Phoenix", "description": "Terrorista Phoenix"},
-        {"imgPath": "../static/images/csgo-elite-crew-tr.png",
-         "alt": "Terrorist Elit Crew", "description": "Terrorista Elit Crew"},
-        {"imgPath": "../static/images/csgo-separatist-tr.png",
-         "alt": "Terrorist Separatist", "description": "Terrorista Separatist"}
-    ]
-
-    guns_list = [
-        {"imgPath": "../static/images/csgo-deagle.png",
-            "alt": "Desert Eagle", "description": "Desert Eagle"},
-        {"imgPath": "../static/images/csgo-ak47.jpg",
-            "alt": "AK47", "description": "Ak47"},
-        {"imgPath": "../static/images/csgo-awp.png",
-            "alt": "AWP", "description": "AWP"},
-    ]
-
     return render_template(
-        'index.html', enimies=enimies_list, guns=guns_list)
+        'index.html', pageTitle='Calculadora de Ataque')
 
 
 if __name__ == '__main__':

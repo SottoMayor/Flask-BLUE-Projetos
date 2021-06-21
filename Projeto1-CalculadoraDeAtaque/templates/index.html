@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="static/main.css">
     <link rel="stylesheet" href="static/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <script src="/static/js/index.js"></script>
 </head>
-<body class="background text-centered">
+<head>
+    <title>Calculadora de Ataque</title>
+</head>
+<body onload="iniciar()">
 
     <header class="main-header container primary">
 
@@ -19,55 +23,81 @@
 
     </header><!--main-header-->
 
-    
     <main class="container-1240 body-project primary">
-        <h2 class="medium-header">
-            Qual <u>inimigo</u> você quer atacar?
-        </h2>
-        <section class="enimies">
+        <div class="linha-container">
+            <h1 class="titulo pula-linha">Calculadora de Ataque</h1>
+        </div>
 
-            {% for dic in enimies %}
+        <div class="linha-container">
+            <h2>Selecione um personagem</h2>
+        </div>
 
-            <article class="enimies_card">
-                <figure>
-                    <img src="{{dic.imgPath}}" alt="{{dic.alt}}">
-                </figure>
-                
-                <h2 class="small-header">{{dic.description}}</h2>
-            </article><!--enimies-card-->
+        <div class="elementos-container">
+            <div class="elemento personagem" id="terrorista-phoenix">
+                <img src="/static/images/csgo-phoenix-tr.png" alt="phoenix-tr" width="200" height="200" />
+                <p>Terrorista Phoenix</p>
+            </div>
+            <div class="elemento personagem" id="terrorista-elite-crew">
+                <img
+                    src="/static/images/csgo-elite-crew-tr.png"
+                    alt="elite-crew-tr"
+                    width="200"
+                    height="200"
+                />
+                <p>Terrorista Elit Crew</p>
+            </div>
+            <div class="elemento personagem" id="terrorista-separatist">
+                <img
+                    src="/static/images/csgo-separatist-tr.png"
+                    alt="Feiticeira"
+                    width="200"
+                    height="200"
+                />
+                <p>Terrorista Separatist</p>
+            </div>
+        </div>
 
-            {% endfor %}
+        <div class="linha-container">
+            <h2>Selecione uma arma</h2>
+        </div>
 
-        </section><!--enimies-->
+        <div class="elementos-container">
+            <div class="elemento arma" id="deagle">
+                <img
+                    src="/static/images/csgo-deagle.png"
+                    alt="Deagle"
+                    width="200"
+                    height="200"
+                />
+                <p>Desert Eagle</p>
+            </div>
+            <div class="elemento arma" id="ak47">
+                <img
+                    src="/static/images/csgo-ak47.jpg"
+                    alt="Ak47"
+                    width="200"
+                    height="200"
+                />
+                <p>Ak47</p>
+            </div>
+            <div class="elemento arma" id="awp">
+                <img
+                    src="/static/images/csgo-awp.png"
+                    alt="awp"
+                    width="200"
+                    height="200"
+                />
+                <p>AWP</p>
+            </div>
+        </div>
 
-        <h2 class="medium-header">
-            Com qual <u>arma</u> você quer atacar?
-        </h2>
+        <div class="linha-container">
+            <button class="btn-success" id="calcular" type="button">Atacar</button>
+        </div>
 
-        <section class="guns">
-
-            {% for dic in guns %}
-
-            <article class="guns_card">
-                <figure>
-                    <img src="{{dic.imgPath}}" alt="{{dic.alt}}">
-                </figure>
-                
-                <h2 class="small-header">{{dic.description}}</h2>
-            </article><!--enimies-card-->
-
-            {% endfor %}
-
-        </section><!--guns-->
-
-        <section class="atacar">
-            <form method="POST" action="/">
-                <button class="btn-success" type="submit">Atacar!</button>
-            </form>
-        </section><!--atacar-->
-
-    </main><!--body-project-->
-
-
+        <div class="linha-container">
+            <span id="dano"></span>
+        </div>
+    </main>
 </body>
 </html>
