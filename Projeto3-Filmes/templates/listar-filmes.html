@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Filmes BlueFlix</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/pages/read_all.css">
+  <!-- <link rel="stylesheet" href="/static/read_all.css"> -->
+</head>
+<body>
+  
+  {% include 'header.html' %}
+
+  <!-- Incluir a tabela com a lista de todos os filmes -->
+  <div class="bloco">
+    <h2>Visualizar todos os registros</h2>
+  </div>
+
+  <div class="bloco">
+    <table class="tabela">
+      <!-- TH = Cabeçalho da nossa Table -->
+      <tr class="tabela_header">
+        <td>ID</td>
+        <td>Nome</td>
+        <td>Imagem</td>
+        <td>Ações</td>
+      </tr>
+
+      <!-- TBODY = Corpo da Tabela (dentro dela que estarão todos os dados mostrados) -->
+      <tbody>
+        <!-- Para CADA filme dentro da minha lista de filmes que estão vindo do app.py -->
+        {% for filme in listaDeFilmes %}
+          <tr>
+            <td>{{filme.id}}</td>
+            <td>{{filme.nome}}</td>
+            <td>
+              <img src="{{filme.imagem_url}}" alt="{{filme.nome}}">
+            </td>
+            <td>
+              <a href="/read/{{filme.id}}" class="botao">Visualizar</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
