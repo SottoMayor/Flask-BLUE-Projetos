@@ -30,12 +30,12 @@
       <!-- TBODY = Corpo da Tabela (dentro dela que estarão todos os dados mostrados) -->
       <tbody>
         <!-- Para CADA filme dentro da minha lista de filmes que estão vindo do app.py -->
-        {% for filme in listaDeFilmes %}
+        {% for filme in registros %}
           <tr>
             <td>{{filme.id}}</td>
             <td>{{filme.nome}}</td>
             <td>
-              <img src="{{filme.imagem_url}}" alt="{{filme.nome}}">
+              <img src="{{filme.image_url}}" alt="{{filme.nome}}">
             </td>
             <td>
               <a href="/read/{{filme.id}}" class="botao">Visualizar</a>
