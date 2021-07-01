@@ -10,8 +10,24 @@ body {
 /* vh = Viewport Height */
 /* calc = calculo --- 843px - 40px = 803px*/
 
+.main-section_p{
+    width: 300px;
+    margin: 15px auto;
+    padding: 5px;
+    border-bottom: 8px solid#5673ee;
+    border-radius: 3px;
+    box-shadow: 0px 11px 6px -9px rgba(0,0,0,0.75);
+}
+
+.main-section_p > h2{
+    font-size: 22px;
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: 3px 2px 1px rgba(182, 180, 180, 0.589);
+}
+
 .header {
-    padding-top: 20px;
+    padding: 20px 0;
     background: #FFFFFF;
 }
 
@@ -23,6 +39,7 @@ body {
 
 .logo {
     width: 200px;
+    padding: 15px 0;
 }
 
 .botao {
@@ -33,12 +50,15 @@ body {
     cursor: pointer;
     display: inline-block;
     font-size: 16px;
-    margin: 0 5px;
+    margin: 15px 5px;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
+    border-bottom: 8px solid #3359ec;
+    transition: 0.4s;
 }
 
 .botao:hover {
     background-color: #5673ee;
+    border-bottom: 8px solid #3359ec;
 }

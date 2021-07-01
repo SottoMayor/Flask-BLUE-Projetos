@@ -31,6 +31,10 @@ class Filmes(db.Model):
         # Buscando todos os filmes do DB
         return Filmes.query.all()
 
+    @staticmethod
+    def read_single(filme_id):
+        return Filmes.query.get(filme_id)
+
 
 @bp.route('/')
 def home():
@@ -47,7 +51,8 @@ def listar_filmes():
 
 @bp.route('/read/<id_filme>')
 def lista_detalhe_filme(id_filme):
-    return 'Página em Construção para o filme com ID -> ' + id_filme
+    filme = Filmes.read_single(id_filme)
+    return render_template('read-single.html', filme=filme)
 
 
 # Pega os dados do blueprint da nossa aplicação (nome do app e as rotas) e

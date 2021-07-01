@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes sobre {{filme.nome}}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/pages/read-single.css">
+</head>
+<body>
+
+    {% include 'header.html' %}
+
+    <main class="main-section">
+        <article class="main-section_card">
+            <div class="main-section_p">
+                <h2>
+                    {{filme.nome}}
+                </h2>
+            </div>
+            
+            <figure class="main-section_figure">
+                <img src="{{filme.image_url}}" alt="{{filme.nome}}">
+            </figure>
+
+            <div class="center">
+                <a href="/read" class="botao">Voltar</a>
+            </div>
+            
+
+        </article>
+    </main>
+</body>
+</html>
